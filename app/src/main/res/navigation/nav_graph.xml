@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dialFragment">
+
+    <fragment
+        android:id="@+id/dialFragment"
+        android:name="dev.sergeitimoshenko.contacts.ui.dialpad.DialpadFragment"
+        android:label="fragment_dial"
+        tools:layout="@layout/fragment_dialpad" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="dev.sergeitimoshenko.contacts.ui.contactslist.ContactsListFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts_list" >
+        <action
+            android:id="@+id/action_contactsFragment_to_addContactFragment"
+            app:destination="@id/addContactFragment" />
+        <action
+            android:id="@+id/action_contactsFragment_to_contactDetailsFragment"
+            app:destination="@id/contactDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addContactFragment"
+        android:name="dev.sergeitimoshenko.contacts.ui.addcontact.AddContactFragment"
+        android:label="fragment_add_contact"
+        tools:layout="@layout/fragment_add_contact" />
+    <fragment
+        android:id="@+id/updateContactFragment"
+        android:name="dev.sergeitimoshenko.contacts.ui.updatecontact.UpdateContactFragment"
+        android:label="fragment_update_contact"
+        tools:layout="@layout/fragment_update_contact" >
+        <argument
+            android:name="contact"
+            app:argType="dev.sergeitimoshenko.contacts.entities.Contact" />
+    </fragment>
+    <fragment
+        android:id="@+id/contactDetailsFragment"
+        android:name="dev.sergeitimoshenko.contacts.ui.contactdetails.ContactDetailsFragment"
+        android:label="fragment_contact_details"
+        tools:layout="@layout/fragment_contact_details" >
+        <action
+            android:id="@+id/action_contactDetailsFragment_to_updateContactFragment"
+            app:destination="@id/updateContactFragment" />
+        <argument
+            android:name="contact"
+            app:argType="dev.sergeitimoshenko.contacts.entities.Contact" />
+    </fragment>
+</navigation>

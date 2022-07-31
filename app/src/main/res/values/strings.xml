@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Contacts</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Item Save Contact -->
+    <string name="et_save_name_hint">Name</string>
+    <string name="et_save_surname_hint">Surname</string>
+    <string name="et_save_email_hint">Email</string>
+    <string name="et_save_phone_hint">Phone</string>
+    <string name="btn_save_title">Save</string>
+
+    <!-- Contact Details -->
+    <string name="btn_call_title">CAll</string>
+    <string name="btn_sms_title">SMS</string>
+    <string name="btn_edit_contact_description">Edit contact</string>
+    <string name="btn_email_title">Email</string>
+
+</resources>
